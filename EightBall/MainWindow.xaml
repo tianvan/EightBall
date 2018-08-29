@@ -5,8 +5,56 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EightBall"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow"
+        Height="328"
+        Width="412">
     <Grid>
-        
+        <Grid.Background>
+            <LinearGradientBrush>
+                <GradientStop Color="Red"
+                              Offset="0" />
+                <GradientStop Color="Indigo"
+                              Offset="0.5" />
+                <GradientStop Color="Violet"
+                              Offset="1" />
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <TextBox x:Name="txtQuestion"
+                 xml:space="preserve"
+                 Grid.Row="0"
+                 Margin="10,10,13,10"
+                 VerticalAlignment="Stretch"
+                 HorizontalAlignment="Stretch"
+                 FontFamily="Verdana"
+                 FontSize="24"
+                 TextWrapping="Wrap"
+                 Foreground="Green"
+                 Text="[请在此提问.]" />
+        <Button x:Name="cmdAnswer"
+                Content="向八球提问"
+                Grid.Row="1"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Left"
+                Margin="10,0,0,20"
+                Width="127"
+                Height="23"
+                Foreground="{x:Static SystemColors.ActiveCaptionBrush}"
+                Click="cmdAnswer_Click" />
+        <TextBox x:Name="txtAnswer"
+                 VerticalAlignment="Stretch"
+                 HorizontalAlignment="Stretch"
+                 Margin="10,10,13,10"
+                 TextWrapping="Wrap"
+                 IsReadOnly="True"
+                 FontFamily="Verdana"
+                 FontSize="24"
+                 Foreground="Green"
+                 Grid.Row="2" />
     </Grid>
 </Window>
